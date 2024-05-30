@@ -1,11 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../features/authSlice";
 
 function Header() {
   const { user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  console.log(user);
+  /* useEffect(() => {
+    if (user === null) {
+      location.reload();
+    }
+  }, []); */
 
   return (
     <section className="bg-secondary">

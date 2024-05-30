@@ -22,6 +22,7 @@ function RegularProducts({ product }) {
   const { isSuccess, data: wishListData } = useGetWishlistQuery();
 
   const wishList = wishListData?.find((li) => li._id === product._id);
+  console.log(wishList);
   const [bg, setBg] = useState(false);
 
   useEffect(() => {
