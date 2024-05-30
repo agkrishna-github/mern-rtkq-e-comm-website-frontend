@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.bgw {
+    background-color: white;
+}
+
+.bgb {
+    background-color: rgb(121, 115, 115);
+}
+
+
+.bgr {
+    background-color: rgb(218, 97, 97);
+}
+
+.bgg {
+    background-color: rgb(124, 216, 124);
+}
+
+.bgy {
+    background-color: rgb(217, 217, 113);
+}
+.bgbl {
+    background-color: rgb(111, 111, 214);
+}
+.bgp {
+    background-color: rgb(214, 111, 185);
+}
+
+.h100 {
+    height: 100px;
+}
+
+
+
+.li-hover {
+    transition: color 0.5s linear;
+}
+
+.li-hover:hover {
+    color: red;
+}
+
+.linklogin {
+    display: none;
+}
+
+.login:hover .linklogin {
+    display: block !important;
+    transform: translateX(100px);
+}
+.calc-h {
+    min-height: calc(100vh - 100px);
+}
