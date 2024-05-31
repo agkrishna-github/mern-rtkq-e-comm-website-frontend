@@ -7,6 +7,7 @@ import SkeletonHome from "./components/SkeletonHome";
 import ErrorFallback from "./components/ErrorFallback";
 import { ErrorBoundary } from "react-error-boundary";
 import Login from "./pages/Login";
+// import Home from "./pages/Home";
 import Register from "./pages/Register";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -14,10 +15,11 @@ import WishList from "./pages/WishList";
 import RequireAuth from "./components/RequireAuth";
 import Orders from "./pages/Orders";
 import Cart from "./pages/Cart";
-import Home from "./pages/Home";
 import SingleProduct from "./pages/SingleProduct";
 import OurStore from "./pages/OurStore";
 import CheckOut from "./pages/CheckOut";
+
+const Home = lazy(() => import("./pages/Home"));
 
 function App() {
   return (
@@ -39,8 +41,8 @@ function App() {
               </Route>
             </Route>
           </Routes>
-          <ToastContainer />
         </Suspense>
+        <ToastContainer />
       </ErrorBoundary>
     </div>
   );
