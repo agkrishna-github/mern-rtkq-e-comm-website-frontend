@@ -98,11 +98,6 @@ function Login() {
               Register Here
             </Link>
           </p>
-          <div>
-            <Link to="/">
-              <button>Count</button>
-            </Link>
-          </div>
         </div>
       </div>
     </div>
