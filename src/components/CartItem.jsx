@@ -37,7 +37,7 @@ const CartItem = ({ cartItem }) => {
         <p className=" d-flex align-items-center" style={{ height: "30px" }}>
           Color : &nbsp;
           <span
-            className="rounded-circle "
+            className="rounded-circle"
             style={{
               width: "30px",
               height: "30px",

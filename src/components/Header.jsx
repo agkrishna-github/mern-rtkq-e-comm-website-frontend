@@ -60,6 +60,7 @@ function Header() {
                 width: "100px",
                 transform: "translateY(50px)",
                 cursor: "pointer",
+                zIndex: "30",
               }}
             >
               {user !== null ? (
