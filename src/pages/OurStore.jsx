@@ -6,6 +6,7 @@ import Categories from "../components/Categories";
 import Slider from "@mui/material/Slider";
 import BrandsComp from "../components/BrandsComp";
 import FeaturesComp from "../components/FeaturesComp";
+import SEO from "../SEO";
 
 const OurStore = () => {
   //   const dispatch = useDispatch();
@@ -155,6 +156,10 @@ const OurStore = () => {
 
   return (
     <main className=" d-flex min-vh-100 gap-3">
+      <SEO
+        title={"Our Store"}
+        description={"This the store page of the website"}
+      />
       <div className="" style={{ width: "15%" }}>
         <section className="mt-5  p-3 bgy">
           <Categories allcategories={allcategories} setCategory={setCategory} />

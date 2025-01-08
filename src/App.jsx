@@ -18,32 +18,38 @@ import Cart from "./pages/Cart";
 import SingleProduct from "./pages/SingleProduct";
 import OurStore from "./pages/OurStore";
 import CheckOut from "./pages/CheckOut";
+import { HelmetProvider } from "react-helmet-async";
 
 const Home = lazy(() => import("./pages/Home"));
 
 function App() {
   return (
     <div>
-      <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <Suspense fallback={<Loader />}>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Home />} />
-              <Route path="register" element={<Register />} />
-              <Route path="login" element={<Login />} />
-              <Route path="ourStore" element={<OurStore />} />
-              <Route path="singleProduct/:prodId" element={<SingleProduct />} />
-              <Route element={<RequireAuth />}>
-                <Route path="wishlist" element={<WishList />} />
-                <Route path="cart" element={<Cart />} />
-                <Route path="orders" element={<Orders />} />
-                <Route path="checkout" element={<CheckOut />} />
+      <HelmetProvider>
+        <ErrorBoundary FallbackComponent={ErrorFallback}>
+          <Suspense fallback={<Loader />}>
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                <Route index element={<Home />} />
+                <Route path="register" element={<Register />} />
+                <Route path="login" element={<Login />} />
+                <Route path="ourStore" element={<OurStore />} />
+                <Route
+                  path="singleProduct/:prodId"
+                  element={<SingleProduct />}
+                />
+                <Route element={<RequireAuth />}>
+                  <Route path="wishlist" element={<WishList />} />
+                  <Route path="cart" element={<Cart />} />
+                  <Route path="orders" element={<Orders />} />
+                  <Route path="checkout" element={<CheckOut />} />
+                </Route>
               </Route>
-            </Route>
-          </Routes>
-        </Suspense>
-        <ToastContainer />
-      </ErrorBoundary>
+            </Routes>
+          </Suspense>
+          <ToastContainer />
+        </ErrorBoundary>
+      </HelmetProvider>
     </div>
   );
 }
